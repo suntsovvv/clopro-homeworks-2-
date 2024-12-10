@@ -192,6 +192,7 @@ backet = "suntsovvv-2024-12-04.storage.yandexcloud.net"
 picture_key = "picture.jpg"
 user@microk8s:~/clopro-homeworks-3$ 
 ```
+![image](https://github.com/user-attachments/assets/10c721be-0691-44b4-a2f4-24b67f30cf6b)
 
 2. (Выполняется не в Terraform)* Создать статический сайт в Object Storage c собственным публичным адресом и сделать доступным по HTTPS:
 
