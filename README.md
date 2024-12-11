@@ -199,33 +199,10 @@ user@microk8s:~/clopro-homeworks-3$
  - создать сертификат;
  - создать статическую страницу в Object Storage и применить сертификат HTTPS;
  - в качестве результата предоставить скриншот на страницу с сертификатом в заголовке (замочек).
-
-Полезные документы:
-
-- [Настройка HTTPS статичного сайта](https://cloud.yandex.ru/docs/storage/operations/hosting/certificate).
-- [Object Storage bucket](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/storage_bucket).
-- [KMS key](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/kms_symmetric_key).
-
---- 
-
-
-Resource Terraform:
-
-- [IAM Role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role).
-- [AWS KMS](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key).
-- [S3 encrypt with KMS key](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_object#encrypting-with-kms-key).
-
-Пример bootstrap-скрипта:
-
-```
-#!/bin/bash
-yum install httpd -y
-service httpd start
-chkconfig httpd on
-cd /var/www/html
-echo "<html><h1>My cool web-server</h1></html>" > index.html
-aws s3 mb s3://mysuperbacketname2021
-aws s3 cp index.html s3://mysuperbacketname2021
-```
+Купленного домена у меня нет.
+Поэтому для интереса создал страницу, поместил в бакет.
+![image](https://github.com/user-attachments/assets/27512b56-b82f-47cf-9514-b05d136f5518)
+Яндекс в такой конфигурации оказыавется подставляет свой сертификат:
+![image](https://github.com/user-attachments/assets/d21e85b1-b8c0-401d-b153-dd70ac1d5e0a)
 
 
